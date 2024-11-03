@@ -85,17 +85,17 @@ public with sharing class FlowControlLoopsCollections {
      * @param a The number to check.
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
-    public static String checkNumber(Integer a) {
-        if (a > 0) {
-            return 'Positive';
-        } else if ( a < 0) {
-            return 'Negative';
-        } else if (a == 0) {
-            return 'Zero';
-        } else {
-        return null; // Replace null with the variable you used to store the result
+        public static String checkNumber(Integer a) {
+            if (a == null) {
+                return null;
+            } else if (a > 0) {
+                return 'Positive';
+            } else if (a < 0) {
+                return 'Negative';
+            } else {
+                return 'Zero';
+            }
         }
-    }
 
     /**
      * Question 5
