@@ -32,9 +32,8 @@ public with sharing class FlowControlLoopsCollections {
         String result;
         if (x > y) {
             result = 'Hello World!';
-            return result;
         }
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
