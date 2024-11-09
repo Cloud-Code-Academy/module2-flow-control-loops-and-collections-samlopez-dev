@@ -420,18 +420,27 @@ public with sharing class FlowControlLoopsCollections {
 
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        employeeSalaries.put('John Doe', 50000);
         // add Jane Smith => 60000
+        employeeSalaries.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        employeeSalaries.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
+        employeeSalaries.put('Alice Johnson', 65000);
+
 
         // Initialize a list to store the names of high paid employees
-
+        List<String> highPaidEmployees = new List<String>();
         // Iterate over the Map using a for loop
+         for (String employeeName : employeeSalaries.keySet()) {
             // Check if the salary of the employee is more than 55000
+            if(employeeSalaries.get(employeeName) > 55000) {
                 // Add the employee to the list of high paid employees
-
+                highPaidEmployees.add(employeeName);
+            }   
+         }
         // Return the list of high paid employees
-        return null; // Replace null with the variable you used to store the result
+        return highPaidEmployees; // Replace null with the variable you used to store the result
     }
 
 }
