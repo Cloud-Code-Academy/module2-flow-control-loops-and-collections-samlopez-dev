@@ -18,6 +18,14 @@
 */
 
 public with sharing class FlowControlLoopsCollections {
+
+    // Declare a constant to be used for question 19 and 20
+    private static final Map<String, Integer> EMPLOYEE_SALARIES = new Map<String, Integer>{
+        'John Doe' => 50000,
+        'Jane Smith' => 60000,
+        'Sam Brown' => 55000,
+        'Alice Johnson' => 65000
+    };
     
     /**
      * Question 1
@@ -373,18 +381,9 @@ public with sharing class FlowControlLoopsCollections {
      * @return The salary of the employee, or null if the employee is not found in the Map.
      */
 
-    // Declare a constant to be used for question 19 and 20
-    private static final Map<String, Integer> EMPLOYEE_SALARIES = new Map<String, Integer>{
-        'John Doe' => 50000,
-        'Jane Smith' => 60000,
-        'Sam Brown' => 55000,
-        'Alice Johnson' => 65000
-    };
-
     public static Integer getSalary(String employeeName) {
         // Get the salary of the employee
         Integer salary = EMPLOYEE_SALARIES.get(employeeName);
-
         // Return the salary of the employee, or null if the employee is not found in the Map
         return salary; // Replace null with the variable you used to store the result
     }
